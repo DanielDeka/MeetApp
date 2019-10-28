@@ -78,8 +78,17 @@
                 <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
                 <li><a href="#services-section" class="nav-link">Services</a></li>
                 <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
-                <li><a href="#blog-section" class="nav-link">Blog</a></li>
                 <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                @if (Route::has('login'))
+                  @auth
+                    <li><a href="{{ url('/home') }}" class="nav-link">Home</a></li>
+                  @else
+                    <li><a href="{{ route('login') }}" class="nav-link">Login</a></li>
+                    @if (Route::has('register'))
+                      <li><a href="{{ route('register') }}" class="nav-link">Register</a></li>
+                    @endif
+                  @endauth
+                @endif
               </ul>
             </nav>
           </div>
