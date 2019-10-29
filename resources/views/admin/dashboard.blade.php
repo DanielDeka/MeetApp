@@ -369,7 +369,7 @@
                         </a>
                         <ul class="list-inline mt-10">
                             <li class="list-inline-item">
-                                <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="be_pages_generic_profile.html">J. Smith</a>
+                                <a class="link-effect text-dual-primary-dark font-size-xs font-w600 text-uppercase" href="be_pages_generic_profile.html">{{Auth::user()->name}}</a>
                             </li>
                             <li class="list-inline-item">
                                 <!-- Layout API, functionality initialized in Codebase() -> uiApiLayout() -->
@@ -378,9 +378,14 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a class="link-effect text-dual-primary-dark" href="op_auth_signin.html">
+                                <a class="link-effect text-dual-primary-dark" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
                                     <i class="si si-logout"></i>
                                 </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </li>
                         </ul>
                     </div>
@@ -1095,7 +1100,7 @@
                 <!-- User Dropdown -->
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-rounded btn-dual-secondary" id="page-header-user-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        J. Smith<i class="fa fa-angle-down ml-5"></i>
+                        {{Auth::user()->name}}<i class="fa fa-angle-down ml-5"></i>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right min-width-150" aria-labelledby="page-header-user-dropdown">
                         <a class="dropdown-item" href="be_pages_generic_profile.html">
@@ -1118,9 +1123,15 @@
                         <!-- END Side Overlay -->
 
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="op_auth_signin.html">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
                             <i class="si si-logout mr-5"></i> Sign Out
                         </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                 </div>
                 <!-- END User Dropdown -->
@@ -1182,7 +1193,7 @@
                 <div class="content content-top content-full text-center">
                     <div class="py-20">
                         <h1 class="h2 font-w700 text-white mb-10">MeetApp Admin Dashboard</h1>
-                        <h2 class="h4 font-w400 text-white-op mb-0">Welcome Admin, Daniel.</h2>
+                        <h2 class="h4 font-w400 text-white-op mb-0">Welcome Admin, {{Auth::user()->name}}.</h2>
                     </div>
                 </div>
             </div>
