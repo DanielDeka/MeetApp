@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
-        <title>Dashboard Administrator MEETAPP</title>
+        <title>Booking MEETAPP</title>
 
         <meta name="description" content="Codebase - Bootstrap 4 Admin Template &amp; UI Framework created by pixelcave and published on Themeforest">
         <meta name="author" content="pixelcave">
@@ -29,6 +29,7 @@
         <!-- Stylesheets -->
         <!-- Codebase framework -->
         <link rel="stylesheet" id="css-main" href="{{asset('assets/css/codebase.min.css')}}">
+
         <!-- END Stylesheets -->
     </head>
     <body>
@@ -51,5 +52,10 @@
 
         <!-- Page JS Code -->
         <script src="{{asset('assets/js/pages/be_pages_ecom_dashboard.js')}}"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+        <script src="{{asset('assets/js/plugins/gmapsjs/gmaps.min.js')}}"></script>
+
+        <!-- Page JS Code -->
+        <script src="{{asset('assets/js/pages/be_comp_maps_google.js')}}"></script>
     </body>
 </html>

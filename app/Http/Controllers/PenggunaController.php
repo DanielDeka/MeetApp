@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
-class HomeController extends Controller
+class PenggunaController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,11 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('pengguna.dashboard');
     }
 
-    public function admin()
+    public function mitra()
     {
-        return view('admin');
+        return view('pengguna.mitra');
     }
 }
