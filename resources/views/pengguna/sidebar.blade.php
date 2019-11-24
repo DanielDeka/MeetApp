@@ -82,6 +82,9 @@
                     <li>
                         <a href="{{url('pengguna')}}"><i class="si si-cup"></i><span class="sidebar-mini-hide">Dashboard</span></a>
                     </li>
+                    <li>
+                        <a href="{{url('pengguna/status-pemesanan')}}"><i class="si si-book-open"></i><span class="sidebar-mini-hide">Status Pemesanan</span></a>
+                    </li>
                 </ul>
             </div>
             <!-- END Side Navigation -->

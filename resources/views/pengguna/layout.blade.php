@@ -29,6 +29,9 @@
         <!-- Stylesheets -->
         <!-- Codebase framework -->
         <link rel="stylesheet" id="css-main" href="{{asset('assets/css/codebase.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/js/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.min.css')}}">
+        <link rel="stylesheet" href="{{asset('assets/js/plugins/ion-rangeslider/css/ion.rangeSlider.skinHTML5.min.css')}}">
 
         <!-- END Stylesheets -->
     </head>
@@ -49,13 +52,22 @@
 
         <!-- Page JS Plugins -->
         <script src="{{asset('assets/js/plugins/chartjs/Chart.bundle.min.js')}}"></script>
+        <script src="{{asset('assets/js/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js')}}"></script>
 
         <!-- Page JS Code -->
         <script src="{{asset('assets/js/pages/be_pages_ecom_dashboard.js')}}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key="></script>
         <script src="{{asset('assets/js/plugins/gmapsjs/gmaps.min.js')}}"></script>
+        <script src="{{asset('assets/js/plugins/masked-inputs/jquery.maskedinput.min.js')}}"></script>
+        <script src="{{asset('assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js')}}"></script>
 
         <!-- Page JS Code -->
         <script src="{{asset('assets/js/pages/be_comp_maps_google.js')}}"></script>
+        <script>
+            jQuery(function () {
+                // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
+                Codebase.helpers(['datepicker', 'masked-inputs', 'rangeslider', 'table-tools']);
+            });
+        </script>
     </body>
 </html>
