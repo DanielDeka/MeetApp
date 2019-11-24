@@ -118,7 +118,7 @@
         <div class="content">
             <div class="my-50 text-center">
                 <h2 class="font-w700 text-black mb-10">Booking</h2>
-                <h3 class="h5 text-muted mb-0">Warunk Upnormal</h3>
+                <h3 class="h5 text-muted mb-0">{{$mitra['nama_mitra']}}</h3>
             </div>
             <div class="row">
                 <div class="col-lg-6 offset-lg-3">
@@ -143,12 +143,12 @@
                     <div class="block block-fx-shadow">
                         <div class="block-content">
                             <div id="crypto-buy">
-                                <form action="{{url('pengguna/submit-booking')}}" method="post">
+                                <form class="js-validation-bootstrap" action="{{url('pengguna/submit-booking')}}" method="post">
                                 	@csrf
                                     <div class="form-group row">
-                                        <label class="col-12" for="crypto-buy-from">Tipe Meja</label>
+                                        <label class="col-12" for="crypto-buy-from">Tipe Meja<span class="text-danger">*</span></label>
                                         <div class="col-12">
-                                            <select class="form-control" name="tipe_booking" required>
+                                            <select class="form-control" id="tipe_booking" name="tipe_booking" required>
                                                 <option value="Meja Reguler">Meja Reguler (2-4 Orang)</option>
                                                 <option value="Meja Besar">Meja Besar (4-8 Orang)</option>
                                                 <option value="Ruang Private">Ruang Private (>10 Orang)</option>
@@ -156,28 +156,29 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-12" for="crypto-buy-to">Jumlah Orang</label>
+                                        <label class="col-12" for="crypto-buy-to">Jumlah Orang<span class="text-danger">*</span></label>
                                         <div class="col-12">
-                                            <input type="number" class="form-control" name="jumlah_orang" required>
+                                            <input type="number" class="form-control" id="jumlah_orang" name="jumlah_orang" required>
+                                            <input type="number" class="form-control" name="id_mitra" value="{{$mitra['id_mitra']}}" hidden>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <div class="col-4">
-                                        	<label class="col-12 px-0" for="example-datepicker1">Tanggal Booking</label>
+                                        	<label class="col-12 px-0" for="example-datepicker1">Tanggal Booking<span class="text-danger">*</span></label>
                                         	<div class="col-12 px-0">
-                                        	    <input type="text" class="js-datepicker form-control" name="tanggal_booking" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" required>
+                                        	    <input type="text" class="js-datepicker form-control" id="tanggal_booking" name="tanggal_booking" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" required>
                                         	</div>
                                         </div>
                                         <div class="col-4">
-                                        	<label class="col-12 px-0" for="example-datepicker1">Waktu Booking</label>
+                                        	<label class="col-12 px-0" for="example-datepicker1">Waktu Booking<span class="text-danger">*</span></label>
                                         	<div class="col-12 px-0">
-                                        	    <input type="text" class="js-masked-time form-control" name="waktu_booking" placeholder="00:00" required>
+                                        	    <input type="text" class="js-masked-time form-control" id="waktu_booking" name="waktu_booking" placeholder="00:00" required>
                                         	</div>
                                         </div>
                                         <div class="col-4">
-                                        	<label class="col-12 px-0" for="example-datepicker1">Durasi Booking (Menit)</label>
+                                        	<label class="col-12 px-0" for="example-datepicker1">Durasi Booking (Menit)<span class="text-danger">*</span></label>
                                         	<div class="col-12 px-0">
-                                        	    <input type="text" class="js-rangeslider" name="durasi_booking" data-grid="true" data-min="0" data-max="240" data-step="30" required>
+                                        	    <input type="text" class="js-rangeslider" id="durasi_booking" name="durasi_booking" data-grid="true" data-min="0" data-max="240" data-step="30" required>
                                         	</div>
                                         </div>
                                     </div>
@@ -190,17 +191,17 @@
                                     </div>
                                     <hr>
                                     <div class="form-group row">
-                                    	<label class="col-12" for="crypto-buy-repeat">Pembayaran</label>
+                                    	<label class="col-12" for="crypto-buy-repeat">Pembayaran<span class="text-danger">*</span></label>
                                         <div class="col-12 text-center">
                                             <div class="btn-group btn-group-toggle my-5" data-toggle="buttons">
                                                 <label class="btn btn-primary">
-                                                    <input type="radio" name="pembayaran_booking" value="ovo"> OVO
+                                                    <input type="radio" name="pembayaran_booking" value="ovo" checked> OVO
                                                 </label>
                                                 <label class="btn btn-primary">
                                                     <input type="radio" name="pembayaran_booking" value="gopay"> GoPay
                                                 </label>
                                                 <label class="btn btn-primary">
-                                                    <input type="radio" name="pembayaran_booking" value="cash" selected> Cash
+                                                    <input type="radio" name="pembayaran_booking" value="cash"> Cash
                                                 </label>
                                             </div>
                                             <div class="font-size-sm text-muted">

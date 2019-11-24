@@ -60,6 +60,9 @@
         <script src="{{asset('assets/js/plugins/gmapsjs/gmaps.min.js')}}"></script>
         <script src="{{asset('assets/js/plugins/masked-inputs/jquery.maskedinput.min.js')}}"></script>
         <script src="{{asset('assets/js/plugins/ion-rangeslider/js/ion.rangeSlider.min.js')}}"></script>
+        <script src="{{asset('assets/js/plugins/jquery-validation/jquery.validate.min.js')}}"></script>
+        <script src="{{asset('assets/js/plugins/jquery-validation/additional-methods.min.js')}}"></script>
+        <script src="{{asset('assets/js/pages/be_forms_validation.js')}}"></script>
 
         <!-- Page JS Code -->
         <script src="{{asset('assets/js/pages/be_comp_maps_google.js')}}"></script>

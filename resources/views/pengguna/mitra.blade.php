@@ -138,7 +138,7 @@
                     <!-- Subscribe -->
                     <div class="block block-rounded">
                         <div class="block-content">
-                            <a class="btn btn-block btn-hero btn-noborder btn-rounded btn-success mb-10" href="{{url('pengguna/mitra/booking')}}">Booking Sekarang!</a>
+                            <a class="btn btn-block btn-hero btn-noborder btn-rounded btn-success mb-10" href="{{url('pengguna/mitra/'.$mitra['id_mitra'].'/booking')}}">Booking Sekarang!</a>
                             <p class="text-center">atau lihat <a class="link-effect" href="javascript:void(0)">promo</a> di tempat</p>
                         </div>
                     </div>

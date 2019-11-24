@@ -22,6 +22,21 @@ var BeFormValidation = function() {
                 jQuery(e).remove();
             },
             rules: {
+                'tipe_booking': {
+                    required: true
+                },
+                'jumlah_orang': {
+                    required: true
+                },
+                'tanggal_booking': {
+                    required: true
+                },
+                'waktu_booking': {
+                    required: true
+                },
+                'durasi_booking': {
+                    required: true
+                },
                 'val-username': {
                     required: true,
                     minlength: 3

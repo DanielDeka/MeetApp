@@ -39,9 +39,10 @@ class PenggunaController extends Controller
         return view('pengguna.mitra', compact('mitra'));
     }
 
-    public function booking()
+    public function booking($id_mitra)
     {
-        return view('pengguna.booking');
+        $mitra = Mitra::where('id_mitra', $id_mitra)->first();
+        return view('pengguna.booking', compact('mitra'));
     }
 
     public function statusPemesanan()

@@ -28,7 +28,7 @@ Route::prefix('/admin')->group(function () {
 Route::prefix('/pengguna')->group(function () {
     Route::get('', 'PenggunaController@index');
     Route::get('/mitra/{id}', 'PenggunaController@mitra');
-    Route::get('/mitra/booking', 'PenggunaController@booking');
+    Route::get('/mitra/{id}/booking', 'PenggunaController@booking');
     Route::get('status-pemesanan', 'PenggunaController@statusPemesanan');
 
     Route::post('/submit-booking', 'PenggunaController@buatPemesanan');
