@@ -26,4 +26,13 @@ class MitraController extends Controller
     {
         return view('mitra.dashboard');
     }
+
+    public function edit(){
+        return view('mitra.edit');
+    }
+
+    public function konfirmasi(){
+        return view('mitra.konfirmasi');
+    }
+
 }
