@@ -27,17 +27,17 @@ Route::prefix('/admin')->group(function () {
 
 Route::prefix('/pengguna')->group(function () {
     Route::get('', 'PenggunaController@index');
-    Route::get('/mitra', 'PenggunaController@mitra');
 });
 
-Route::prefix('/mitra')->group(function () {
-    Route::get('', 'PenggunaController@index');
-    Route::get('/mitra', 'PenggunaController@mitra');
-});
 
 Route::prefix('/mitra')->group(function () {
     Route::get('', 'MitraController@index');
     Route::get('/mitra', 'MitraController@mitra');
     Route::get('/edit','MitraController@edit');
     Route::get('/konfirmasi', 'MitraController@konfirmasi');
+    Route::get('/mitra/{id}', 'PenggunaController@mitra');
+    Route::get('/mitra/{id}/booking', 'PenggunaController@booking');
+    Route::get('status-pemesanan', 'PenggunaController@statusPemesanan');
+
+    Route::post('/submit-booking', 'PenggunaController@buatPemesanan');
 });

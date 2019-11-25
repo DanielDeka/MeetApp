@@ -138,13 +138,12 @@
                 <i class="si si-star mr-5"></i> Tempat Meeting Terbaik
             </h2>
             <div class="row row-deck items-push">
+                @foreach($mitra as $mitra)
                 <div class="col-md-6 col-xl-3">
-                    <a class="block block-link-shadow block-rounded ribbon ribbon-bookmark ribbon-left ribbon-success text-center" href="{{url('pengguna/mitra')}}">
+                    <a class="block block-link-shadow block-rounded ribbon ribbon-bookmark ribbon-left ribbon-success text-center" href="{{url('pengguna/mitra/'.$mitra['id_mitra'])}}">
                         <div class="ribbon-box">Rp 5K</div>
                         <div class="block-content block-content-full">
-                            <div class="item item-circle bg-pulse text-pulse-lighter mx-auto my-20">
-                                <i class="fa fa-html5"></i>
-                            </div>
+                            {{$mitra['nama_mitra']}}
                             <div class="text-warning">
                                 <i class="fa fa-fw fa-star"></i>
                                 <i class="fa fa-fw fa-star"></i>
@@ -164,57 +163,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-xl-3">
-                    <a class="block block-link-shadow block-rounded ribbon ribbon-bookmark ribbon-left ribbon-success text-center" href="{{url('pengguna/mitra')}}">
-                        <div class="ribbon-box">Rp 10K</div>
-                        <div class="block-content block-content-full">
-                            <div class="item item-circle bg-pulse text-pulse-lighter mx-auto my-20">
-                                <i class="fa fa-html5"></i>
-                            </div>
-                            <div class="text-warning">
-                                <i class="fa fa-fw fa-star"></i>
-                                <i class="fa fa-fw fa-star"></i>
-                                <i class="fa fa-fw fa-star"></i>
-                                <i class="fa fa-fw fa-star"></i>
-                                <i class="fa fa-fw fa-star"></i>
-                            </div>
-                            <div class="font-size-sm text-muted">
-                                (30 reviews)
-                            </div>
-                        </div>
-                        <div class="block-content block-content-full block-content-sm bg-body-light">
-                            <div class="font-size-sm text-muted">30 Meja &bull; min. 1 Jam</div>
-                        </div>
-                        <div class="block-content block-content-full">
-                            <div class="font-w600">Tempatnya cozy, instagramable</div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-6 col-xl-3">
-                    <a class="block block-link-shadow block-rounded ribbon ribbon-bookmark ribbon-left ribbon-success text-center" href="{{url('pengguna/mitra')}}">
-                        <div class="ribbon-box">Rp 7K</div>
-                        <div class="block-content block-content-full">
-                            <div class="item item-circle bg-pulse text-pulse-lighter mx-auto my-20">
-                                <i class="fa fa-html5"></i>
-                            </div>
-                            <div class="text-warning">
-                                <i class="fa fa-fw fa-star"></i>
-                                <i class="fa fa-fw fa-star"></i>
-                                <i class="fa fa-fw fa-star"></i>
-                                <i class="fa fa-fw fa-star"></i>
-                            </div>
-                            <div class="font-size-sm text-muted">
-                                (10 reviews)
-                            </div>
-                        </div>
-                        <div class="block-content block-content-full block-content-sm bg-body-light">
-                            <div class="font-size-sm text-muted">5 Meja &bull; No minimum booking</div>
-                        </div>
-                        <div class="block-content block-content-full">
-                            <div class="font-w600">Warung semua ada, nyaman, free Wi-Fi</div>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
             </div>
             <!-- END Featured Courses -->
 

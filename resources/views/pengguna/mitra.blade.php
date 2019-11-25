@@ -119,7 +119,7 @@
             <div class="bg-black-op">
                 <div class="content content-top text-center">
                     <div class="py-50">
-                        <h1 class="font-w700 text-white mb-10">WARUNK UPNORMAL</h1>
+                        <h1 class="font-w700 text-white mb-10 text-uppercase">{{$mitra['nama_mitra']}}</h1>
                         <h2 class="h4 font-w400 text-white-op">10 Meja &bull; min. 2 Jam</h2>
                     </div>
                 </div>
@@ -131,14 +131,14 @@
         <div class="content">
             <nav class="breadcrumb bg-white push">
                 <a class="breadcrumb-item" href="be_pages_elearning_courses.html">Mitra</a>
-                <span class="breadcrumb-item active">Warunk Upnormal</span>
+                <span class="breadcrumb-item active">{{$mitra['nama_mitra']}}</span>
             </nav>
             <div class="row">
                 <div class="col-xl-4">
                     <!-- Subscribe -->
                     <div class="block block-rounded">
                         <div class="block-content">
-                            <a class="btn btn-block btn-hero btn-noborder btn-rounded btn-success mb-10" href="javascript:void(0)">Booking Sekarang!</a>
+                            <a class="btn btn-block btn-hero btn-noborder btn-rounded btn-success mb-10" href="{{url('pengguna/mitra/'.$mitra['id_mitra'].'/booking')}}">Booking Sekarang!</a>
                             <p class="text-center">atau lihat <a class="link-effect" href="javascript:void(0)">promo</a> di tempat</p>
                         </div>
                     </div>
