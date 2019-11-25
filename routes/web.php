@@ -32,4 +32,5 @@ Route::prefix('/pengguna')->group(function () {
     Route::get('status-pemesanan', 'PenggunaController@statusPemesanan');
 
     Route::post('/submit-booking', 'PenggunaController@buatPemesanan');
+    Route::post('/submit-verifikasi-booking', 'PenggunaController@verifikasiPemesanan');
 });

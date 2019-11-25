@@ -117,11 +117,11 @@
         <!-- Page Content -->
         <div class="content">
             <div class="my-50 text-center">
-                <h2 class="font-w700 text-black mb-10">Booking</h2>
-                <h3 class="h5 text-muted mb-0">{{$mitra['nama_mitra']}}</h3>
+                <h2 class="font-w700 text-black mb-10">Pembayaran Booking</h2>
+                <h3 class="h5 text-muted mb-0"></h3>
             </div>
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
+                <div class="col-lg-10 offset-lg-1">
                 	@if ($message = Session::get('error'))
 	                	<div class="alert alert-danger alert-dismissable" role="alert">
 	                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -143,75 +143,78 @@
                     <div class="block block-fx-shadow">
                         <div class="block-content">
                             <div id="crypto-buy">
-                                <form class="js-validation-bootstrap" action="{{url('pengguna/submit-booking')}}" method="post">
-                                	@csrf
-                                    <div class="form-group row">
-                                        <label class="col-12" for="crypto-buy-from">Tipe Meja<span class="text-danger">*</span></label>
-                                        <div class="col-12">
-                                            <select class="form-control" id="tipe_booking" name="tipe_booking" required>
-                                                <option value="Meja Reguler">Meja Reguler (2-4 Orang)</option>
-                                                <option value="Meja Besar">Meja Besar (4-8 Orang)</option>
-                                                <option value="Ruang Private">Ruang Private (>10 Orang)</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-12" for="crypto-buy-to">Jumlah Orang<span class="text-danger">*</span></label>
-                                        <div class="col-12">
-                                            <input type="number" class="form-control" id="jumlah_orang" name="jumlah_orang" required>
-                                            <input type="number" class="form-control" name="id_mitra" value="{{$mitra['id_mitra']}}" hidden>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-4">
-                                        	<label class="col-12 px-0" for="example-datepicker1">Tanggal Booking<span class="text-danger">*</span></label>
-                                        	<div class="col-12 px-0">
-                                        	    <input type="text" class="js-datepicker form-control" id="tanggal_booking" name="tanggal_booking" data-week-start="1" data-autoclose="true" data-today-highlight="true" data-date-format="dd/mm/yyyy" placeholder="dd/mm/yyyy" required>
-                                        	</div>
-                                        </div>
-                                        <div class="col-4">
-                                        	<label class="col-12 px-0" for="example-datepicker1">Waktu Booking<span class="text-danger">*</span></label>
-                                        	<div class="col-12 px-0">
-                                        	    <input type="text" class="js-masked-time form-control" id="waktu_booking" name="waktu_booking" placeholder="00:00" required>
-                                        	</div>
-                                        </div>
-                                        <div class="col-4">
-                                        	<label class="col-12 px-0" for="example-datepicker1">Durasi Booking (Menit)<span class="text-danger">*</span></label>
-                                        	<div class="col-12 px-0">
-                                        	    <input type="text" class="js-rangeslider" id="durasi_booking" name="durasi_booking" data-grid="true" data-min="0" data-max="240" data-step="30" required>
-                                        	</div>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="col-12">
-                                    	<label class="col-12 px-0" for="example-datepicker1">Total Harga Pemesanan</label>
-                                    	<div class="col-12 px-0">
-                                    	    <em><p class="p-10 bg-primary-lighter text-primary-dark">RP. 50.000</p></em>
-                                    	</div>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group row">
-                                    	<label class="col-12" for="crypto-buy-repeat">Pembayaran<span class="text-danger">*</span></label>
-                                        <div class="col-12 text-center">
-                                            <div class="btn-group btn-group-toggle my-5" data-toggle="buttons">
-                                                <label class="btn btn-primary">
-                                                    <input type="radio" name="pembayaran_booking" value="ovo" checked> OVO
-                                                </label>
-                                                <label class="btn btn-primary">
-                                                    <input type="radio" name="pembayaran_booking" value="gopay"> GoPay
-                                                </label>
-                                                <label class="btn btn-primary">
-                                                    <input type="radio" name="pembayaran_booking" value="transfer"> Transfer Bank
-                                                </label>
+                                <form class="js-validation-bootstrap" action="{{url('pengguna/submit-verifikasi-booking')}}" method="post">
+                                    @csrf
+                                    <div class="row items-push">
+                                        <div class="col-md-4 animated fadeIn">
+                                            <div class="options-container fx-item-zoom-in fx-overlay-slide-down">
+                                            <img class="img-fluid options-item" src="{{asset('images/qr_gopay.jpg')}}" alt="">
+                                                <div class="options-overlay bg-white-op-95">
+                                                    <div class="options-overlay-content">
+                                                        <h3 class="h4 mb-5">GOPAY</h3>
+                                                        <h4 class="h6 text-gray-dark mb-15">Scan Barcode untuk melakukan pembayaran</h4>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="font-size-sm text-muted">
-                                                <em>Pembayaran menggunakan OVO dan GoPay memerlukan verifikasi tambahan</em>
+                                        </div>
+                                        <div class="col-md-4 animated fadeIn d-flex justify-content-center">
+                                            <div class="options-container fx-item-zoom-in fx-overlay-slide-down">
+                                            <img class="img-fluid options-item" src="{{asset('images/qr_ovo.jpg')}}" alt="" style="width:100%">
+                                                <div class="options-overlay bg-white-op-95">
+                                                    <div class="options-overlay-content">
+                                                        <h3 class="h4 mb-5">OVO</h3>
+                                                        <h4 class="h6 text-gray-dark mb-15">Scan Barcode untuk melakukan pembayaran</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 animated fadeIn">
+                                            <div class="options-container fx-item-zoom-in fx-overlay-slide-down">
+                                            <img class="img-fluid options-item" src="{{asset('images/qr_btpn.jpg')}}" alt="">
+                                                <div class="options-overlay bg-white-op-95">
+                                                    <div class="options-overlay-content">
+                                                        <h3 class="h4 mb-5">Transfer Bank</h3>
+                                                        <h4 class="h6 text-gray-dark mb-15">Transfer biaya pemesanan ke Bank Tabungan Pensiunan Nasional a/n Daniel Kurniawan, no. rek : 90012960308</h4>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
+                                    <h1 class="font-w300"><p class="bg-primary-danger text-danger-dark">!! Jangan tinggalkan halaman ini jika belum memasukkan nomor transaksi pembayaran!</p></h1>
+                                    <h1><small>Meninggalkan halaman ini berarti membatalkan transaksi</small></h1>
+                                    <hr>
+                                    <div class="row">
                                         <div class="col-12">
-                                            <button type="submit" class="btn btn-hero btn-lg btn-block btn-alt-success">Lakukan Pemesanan</button>
+                                            <label class="col-12 px-0">Total Harga Pemesanan</label>
+                                            <div class="col-12 px-0">
+                                                <em><p class="p-10 bg-primary-lighter text-primary-dark">RP. 50.000</p></em>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-12">
+                                                <label class="col-12 px-0">Metode Pembayaran</label>
+                                                <div class="col-12 px-0">
+                                                <em><p class="p-10 bg-primary-lighter text-primary-dark text-uppercase">{{$pembayaran}}</p></em>
+                                                    <em>Pastikan metode pembayaran anda dengan pilihan awal sesuai.</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <hr>
+                                    <div class="form-group row">
+                                    	<label class="col-12" for="crypto-buy-from">Kode Transaksi Pembayaran<span class="text-danger">*</span></label>
+                                        <div class="col-12">
+                                            <input type="text" class="form-control" id="no_verifikasi" name="no_verifikasi" required>
+                                            <input type="text" class="form-control" name="id_booking" value="{{$booking}}" hidden>
+                                            <input type="text" class="form-control" name="id_mitra" value="{{$mitra}}" hidden>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-6">
+                                            <button type="button" class="btn btn-hero btn-lg btn-block btn-alt-danger">Batalkan Pembayaran</button>
+                                        </div>
+                                        <div class="col-6">
+                                            <button type="submit" class="btn btn-hero btn-lg btn-block btn-alt-success">Verifikasi Pembayaran</button>
                                         </div>
                                     </div>
                                 </form>
