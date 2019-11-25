@@ -29,3 +29,15 @@ Route::prefix('/pengguna')->group(function () {
     Route::get('', 'PenggunaController@index');
     Route::get('/mitra', 'PenggunaController@mitra');
 });
+
+Route::prefix('/mitra')->group(function () {
+    Route::get('', 'PenggunaController@index');
+    Route::get('/mitra', 'PenggunaController@mitra');
+});
+
+Route::prefix('/mitra')->group(function () {
+    Route::get('', 'MitraController@index');
+    Route::get('/mitra', 'MitraController@mitra');
+    Route::get('/edit','MitraController@edit');
+    Route::get('/konfirmasi', 'MitraController@konfirmasi');
+});
