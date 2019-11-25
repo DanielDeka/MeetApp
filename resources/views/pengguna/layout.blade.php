@@ -71,6 +71,27 @@
                 // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
                 Codebase.helpers(['datepicker', 'masked-inputs', 'rangeslider', 'table-tools']);
             });
+
+            function hitung_harga()
+            {
+                var harga_meja;
+                if($('#tipe_booking').val() == 'Meja Reguler') harga_meja = $('input[name="meja_kecil"]').val();
+                else if ($('#tipe_booking').val() == 'Meja Besar') harga_meja = $('input[name="meja_sedang"]').val();
+                else if ($('#tipe_booking').val() == 'Ruang Private') harga_meja = $('input[name="meja_besar"]').val();
+
+                var durasi = $('#durasi_booking').val()/60;
+
+                var total_harga = harga_meja * durasi;
+                $('.total-harga').html('Rp. '+ total_harga);
+            }
+
+            $('#tipe_booking').on('change', function() {
+                hitung_harga();
+            });
+
+            $('#durasi_booking').on('change', function() {
+                hitung_harga();
+            });
         </script>
     </body>
 </html>

@@ -14,4 +14,9 @@ class Booking extends Model
     {
     	return $this->hasOne('App\Mitra', 'id_mitra', 'id_mitra');
     }
+
+    public function getPengguna()
+    {
+    	return $this->hasOne('App\User', 'id', 'id_pengguna');
+    }
 }

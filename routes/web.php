@@ -40,4 +40,10 @@ Route::prefix('/mitra')->group(function () {
     Route::get('/mitra', 'MitraController@mitra');
     Route::get('/edit','MitraController@edit');
     Route::get('/konfirmasi', 'MitraController@konfirmasi');
+
+    Route::post('/status-toko', 'MitraController@toggleStatusToko');
+    Route::post('/form-profil-mitra', 'MitraController@profilMitra');
+    Route::post('/form-harga-mitra', 'MitraController@hargaMitra');
+    Route::post('/tolak-pemesanan', 'MitraController@tolakPemesanan');
+    Route::post('/terima-pemesanan', 'MitraController@terimaPemesanan');
 });

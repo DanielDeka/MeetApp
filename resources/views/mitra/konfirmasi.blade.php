@@ -129,135 +129,106 @@
         <!-- Page Content -->
         <div class="content">
             <!-- Meta Data -->
+            <nav class="breadcrumb bg-white push">
+                <span class="breadcrumb-item">Mitra</span>
+                <a class="breadcrumb-item" href="{{url('/mitra')}}">{{ $mitra->nama_mitra }}</a>
+                <span class="breadcrumb-item active">Konfirmasi</span>
+            </nav>
+            @if ($message = Session::get('error'))
+                <div class="alert alert-danger alert-dismissable" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h3 class="alert-heading font-size-h4 font-w400">Error</h3>
+                    <p class="mb-0">{{$message}}</p>
+                </div>
+            @endif
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-dismissable" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h3 class="alert-heading font-size-h4 font-w400">Success</h3>
+                    <p class="mb-0">{{$message}}</p>
+                </div>
+            @endif
             <div class="block">
                 <div class="block-content">
-                    <table class="table table-hover table-vcenter">
+                    <form method="post">
+                    <table class="table table-hover js-table-sections">
                         <thead>
                             <tr>
-                                <th class="text-center" style="width: 50px;">#</th>
-                                <th>Nama</th>
-                                <th>Kontak</th>
-                                <th>Waktu</th>
-                                <th>Jumlah Orang</th>
-                                <th class="d-none d-sm-table-cell" style="width: 15%;">Status</th>
-                                <th class="text-center" style="width: 100px;">Aksi</th>
+                                <th style="width: 30px;"></th>
+                                <th>Tempat</th>
+                                <th style="width: 15%;">Status</th>
+                                <th class="d-none d-sm-table-cell" style="width: 20%;">Tanggal Pemesanan</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th class="text-center" scope="row">1</th>
-                                <td>Amber Harvey</td>
-                                <td>0815246532</td>
-                                <td>Senin, 10 Oktober 2020 18.00 WIB</td>
-                                <td>7 Orang</td>
-                                <td class="d-none d-sm-table-cell">
-                                    <span class="badge badge-danger mr-3">belum dikonfirmasi</span>
-                                </td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
-                                        Konfirmasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th class="text-center" scope="row">1</th>
-                                <td>Amber Harvey</td>
-                                <td>0815246532</td>
-                                <td>Senin, 10 Oktober 2020 18.00 WIB</td>
-                                <td>7 Orang</td>
-                                <td class="d-none d-sm-table-cell">
-                                    <span class="badge badge-danger mr-3">belum dikonfirmasi</span>
-                                </td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
-                                        Konfirmasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th class="text-center" scope="row">1</th>
-                                <td>Amber Harvey</td>
-                                <td>0815246532</td>
-                                <td>Senin, 10 Oktober 2020 18.00 WIB</td>
-                                <td>7 Orang</td>
-                                <td class="d-none d-sm-table-cell">
-                                    <span class="badge badge-danger mr-3">belum dikonfirmasi</span>
-                                </td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
-                                        Konfirmasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th class="text-center" scope="row">1</th>
-                                <td>Amber Harvey</td>
-                                <td>0815246532</td>
-                                <td>Senin, 10 Oktober 2020 18.00 WIB</td>
-                                <td>7 Orang</td>
-                                <td class="d-none d-sm-table-cell">
-                                    <span class="badge badge-danger mr-3">belum dikonfirmasi</span>
-                                </td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
-                                        Konfirmasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th class="text-center" scope="row">1</th>
-                                <td>Amber Harvey</td>
-                                <td>0815246532</td>
-                                <td>Senin, 10 Oktober 2020 18.00 WIB</td>
-                                <td>7 Orang</td>
-                                <td class="d-none d-sm-table-cell">
-                                    <span class="badge badge-danger mr-3">belum dikonfirmasi</span>
-                                </td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
-                                        Konfirmasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th class="text-center" scope="row">1</th>
-                                <td>Amber Harvey</td>
-                                <td>0815246532</td>
-                                <td>Senin, 10 Oktober 2020 18.00 WIB</td>
-                                <td>7 Orang</td>
-                                <td class="d-none d-sm-table-cell">
-                                    <span class="badge badge-danger mr-3">belum dikonfirmasi</span>
-                                </td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
-                                        Konfirmasi
-                                    </button>
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <th class="text-center" scope="row">1</th>
-                                <td>Amber Harvey</td>
-                                <td>0815246532</td>
-                                <td>Senin, 10 Oktober 2020 18.00 WIB</td>
-                                <td>7 Orang</td>
-                                <td class="d-none d-sm-table-cell">
-                                    <span class="badge badge-danger mr-3">belum dikonfirmasi</span>
-                                </td>
-                                <td class="text-center">
-                                    <button type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Edit">
-                                        Konfirmasi
-                                    </button>
-                                </td>
-                            </tr>
-                            
+                            @foreach($pesanan as $pesanan)
+                            <tbody class="js-table-sections-header show table-active">
+                                <tr>
+                                    <td class="text-center">
+                                        <i class="fa fa-angle-right"></i>
+                                    </td>
+                                    <td class="font-w600">{{$pesanan['getPengguna']['name']}} <em>({{$pesanan['tipe_booking']}})</em></td>
+                                    <td>
+                                        @if($pesanan['status_booking'] == 'Menunggu Verifikasi')
+                                            <span class="badge badge-warning">{{$pesanan['status_booking']}}</span>
+                                        @elseif($pesanan['status_booking'] == 'Gagal')
+                                            <span class="badge badge-danger">{{$pesanan['status_booking']}}</span>
+                                        @elseif($pesanan['status_booking'] == 'Berhasil')
+                                            <span class="badge badge-success">{{$pesanan['status_booking']}}</span>
+                                        @endif
+                                    </td>
+                                    <td class="d-none d-sm-table-cell">
+                                        <em class="text-muted">{{$pesanan['tanggal_booking']}} {{$pesanan['waktu_booking']}} ({{$pesanan['durasi_booking']}} Menit)</em>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td class="text-center"></td>
+                                    @if ($verif = $pesanan['no_verifikasi_booking'])
+                                        <td class="font-w600">{{$pesanan['kuota_booking']}} Orang <em>( {{$pesanan['no_verifikasi_booking']}} )</em></td>
+                                    @else
+                                        <td class="font-w600">{{$pesanan['kuota_booking']}} Orang <em>( {{'Belum ada nomor verifikasi'}} )</em></td>
+                                    @endif
+                                    <td class="font-size-sm">Rp. {{$pesanan['biaya_booking']}}</td>
+                                    <td class="d-none d-sm-table-cell">
+                                        <span class="font-size-sm text-muted">
+                                            @if ($pesanan['pesan_status_booking'])
+                                                {{$pesanan['pesan_status_booking']}}
+                                            @else
+                                                -
+                                            @endif
+                                        </span>
+                                    </td>
+                                </tr>
+                                @if ($pesanan['status_booking'] == 'Menunggu Verifikasi')
+                                <tr>
+                                @csrf
+                                <input class="form-control" type="hidden" name="id_booking" value="{{$pesanan['id_booking']}}">
+                                    {{-- <input class="form-control" type="hidden" name="status_konfirmasi"> --}}
+                                    <td class="text-center" colspan="4">
+                                        <div class="col-6 mr-0 float-left">
+                                            <label class="col-12 px-0 float-left">Pesan Konfirmasi<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control" name="pesan_konfirmasi" required>
+                                        </div>
+                                        <div class="col-3 float-right">
+                                            <button type="button" name="button-tolak" class="button-tolak btn btn-hero btn-lg btn-block btn-alt-danger">Tolak</button>
+                                        </div>
+                                        <div class="col-3 float-right">
+                                            <button type="button" name="button-terima" class="button-terima btn btn-hero btn-lg btn-block btn-alt-success">Konfirmasi</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                @endif
+                            </tbody>
+                            @endforeach
                         </tbody>
                     </table>
+                    </form>
                 </div>
             </div>
         <!-- END Page Content -->

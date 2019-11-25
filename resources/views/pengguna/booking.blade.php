@@ -148,6 +148,9 @@
                                     <div class="form-group row">
                                         <label class="col-12" for="crypto-buy-from">Tipe Meja<span class="text-danger">*</span></label>
                                         <div class="col-12">
+                                            <input type="hidden" name="meja_kecil" value="{{$mitra['harga_meja_kecil']}}">
+                                            <input type="hidden" name="meja_sedang" value="{{$mitra['harga_meja_sedang']}}">
+                                            <input type="hidden" name="meja_besar" value="{{$mitra['harga_meja_besar']}}">
                                             <select class="form-control" id="tipe_booking" name="tipe_booking" required>
                                                 <option value="Meja Reguler">Meja Reguler (2-4 Orang)</option>
                                                 <option value="Meja Besar">Meja Besar (4-8 Orang)</option>
@@ -186,7 +189,7 @@
                                     <div class="col-12">
                                     	<label class="col-12 px-0" for="example-datepicker1">Total Harga Pemesanan</label>
                                     	<div class="col-12 px-0">
-                                    	    <em><p class="p-10 bg-primary-lighter text-primary-dark">RP. 50.000</p></em>
+                                    	    <em><p class="total-harga p-10 bg-primary-lighter text-primary-dark">RP. 0</p></em>
                                     	</div>
                                     </div>
                                     <hr>

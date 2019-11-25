@@ -9,7 +9,6 @@ use Auth;
 use Session;
 use DB;
 use Exception;
-use PhpParser\Node\Stmt\TryCatch;
 
 class PenggunaController extends Controller
 {

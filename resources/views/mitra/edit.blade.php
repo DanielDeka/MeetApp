@@ -129,44 +129,94 @@
 
         <!-- Page Content -->
         <div class="content">
+            <nav class="breadcrumb bg-white push">
+                <span class="breadcrumb-item">Mitra</span>
+                <a class="breadcrumb-item" href="{{url('/mitra')}}">{{ $mitra->nama_mitra }}</a>
+                <span class="breadcrumb-item active">Edit</span>
+            </nav>
+            @if ($message = Session::get('error'))
+                <div class="alert alert-danger alert-dismissable" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h3 class="alert-heading font-size-h4 font-w400">Error</h3>
+                    <p class="mb-0">{{$message}}</p>
+                </div>
+            @endif
+            @if ($message = Session::get('success'))
+                <div class="alert alert-success alert-dismissable" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h3 class="alert-heading font-size-h4 font-w400">Success</h3>
+                    <p class="mb-0">{{$message}}</p>
+                </div>
+            @endif
             <!-- Meta Data -->
-            <form action="be_pages_ecom_product_edit.html" method="post" onsubmit="return false;">
+            <form action="{{url('/mitra/form-profil-mitra')}}" method="post">
+                @csrf
+                <input type="hidden" name="id_mitra" value="{{$mitra->id_mitra}}">
                 <div class="block block-rounded block-themed">
                     <div class="block-header bg-gd-primary">
                         <h3 class="block-title">Profil Tempat Makan</h3>
                         <div class="block-options">
-                            <button type="submit" class="btn btn-sm btn-alt-primary">
+                            {{-- <button type="submit" class="btn btn-sm btn-alt-primary">
                                 <i class="fa fa-save mr-5"></i>Save
-                            </button>
+                            </button> --}}
                         </div>
                     </div>
                     <div class="block-content">
                         <!-- Bootstrap Maxlength (.js-maxlength class is initialized in Codebase() -> uiHelperMaxlength()) -->
                         <!-- For more info and examples you can check out https://github.com/mimo84/bootstrap-maxlength -->
                         <div class="form-group row">
-                            <label class="col-12" for="ecom-product-meta-title">Nama Tempat Makan</label>
+                            <label class="col-12">Nama Tempat Makan</label>
                             <div class="col-12">
-                                <input type="text" class="js-maxlength form-control" id="ecom-product-meta-title" name="ecom-product-meta-title" maxlength="55" data-always-show="true" data-placement="top" placeholder="Meta Title" value="Warunk Upnormal">
+                                <input type="text" class="js-maxlength form-control" name="nama_mitra" maxlength="55" data-always-show="true" data-placement="top" placeholder="Meta Title" value="{{$mitra->nama_mitra}}">
                                 <div class="form-text text-muted font-size-sm text-right">55 Characters Max</div>
                             </div>
-                            <label class="col-12" for="ecom-product-meta-title">Batas Maksimum Booking</label>
-                            <div class="col-12">
-                                <input type="text" class="js-maxlength form-control" id="ecom-product-meta-title" name="ecom-product-meta-title" maxlength="55" data-always-show="true" data-placement="top" placeholder="Meta Title" value="2 Jam">
+                            <div class="col-12" style="padding-top: 10px">
+                                <button type="submit" class="btn btn-sm btn-alt-success float-right">
+                                    <i class="fa fa-save mr-5"></i>Save
+                                </button>
                             </div>
-                            <label class="col-12" for="ecom-product-meta-title" style="padding-top: 10px">Kuota Meja</label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <form action="{{url('/mitra/form-harga-mitra')}}" method="post">
+                @csrf
+                <input type="hidden" name="id_mitra" value="{{$mitra->id_mitra}}">
+                <div class="block block-rounded block-themed">
+                    <div class="block-header bg-gd-primary">
+                        <h3 class="block-title">Harga</h3>
+                        <div class="block-options">
+                            {{-- <button type="submit" class="btn btn-sm btn-alt-primary">
+                                <i class="fa fa-save mr-5"></i>Save
+                            </button> --}}
+                        </div>
+                    </div>
+                    <div class="block-content">
+                        <!-- Bootstrap Maxlength (.js-maxlength class is initialized in Codebase() -> uiHelperMaxlength()) -->
+                        <!-- For more info and examples you can check out https://github.com/mimo84/bootstrap-maxlength -->
+                        <div class="form-group row">
+                            <label class="col-12" for="ecom-product-meta-title">Harga Meja Kecil</label>
                             <div class="col-12">
-                                <input type="text" class="js-maxlength form-control" id="ecom-product-meta-title" name="ecom-product-meta-title" maxlength="55" data-always-show="true" data-placement="top" placeholder="Meta Title" value="5-6 Orang">
+                            <input type="number" class="form-control" name="harga_meja_kecil" placeholder="Harga Meja Kecil" value="{{$mitra->harga_meja_kecil}}" required>
                             </div>
-                            <label class="col-12" for="ecom-product-meta-title" style="padding-top: 10px">Minimal Purchase</label>
+                            <label class="col-12" for="ecom-product-meta-title">Harga Meja Sedang</label>
                             <div class="col-12">
-                                <input type="text" class="js-maxlength form-control" id="ecom-product-meta-title" name="ecom-product-meta-title" maxlength="55" data-always-show="true" data-placement="top" placeholder="Meta Title" value="Rp 100.000,-">
+                            <input type="number" class="form-control" name="harga_meja_sedang" placeholder="Harga Meja Sedang" value="{{$mitra->harga_meja_sedang}}" required>
                             </div>
-                            
-
-
-
-
-                            
+                            <label class="col-12" for="ecom-product-meta-title">Harga Meja Besar</label>
+                            <div class="col-12">
+                            <input type="number" class="form-control" name="harga_meja_besar" placeholder="Harga Meja Sedang" value="{{$mitra->harga_meja_besar}}" required>
+                            </div>
+                            <div class="col-12" style="padding-top: 10px">
+                                <button type="submit" class="btn btn-sm btn-alt-success float-right">
+                                    <i class="fa fa-save mr-5"></i>Save
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -114,14 +114,29 @@
 
     <!-- Main Container -->
     <main id="main-container">
+
         <!-- Hero -->
         <div class="bg-image" style="background-image: url({{asset('assets/img/various/landing-promo-developer-minded-html@2x.png')}})">
             <div class="bg-black-op">
                 <div class="content content-top text-center">
                     <div class="py-50">
-                        <h1 class="font-w700 text-white mb-10">WARUNK UPNORMAL</h1>
-                        <h2 class="h4 font-w400 text-white-op">10 Meja &bull; min. 2 Jam <a href="/mitra/edit"><i class="fa fa-gear"></i></a></h2>
-                        <a class="btn btn-hero btn-noborder btn-rounded btn-danger" href="javascript:void(0)">Restoran Tutup</a>
+                        <form class="js-validation-bootstrap" action="{{url('mitra/status-toko')}}" method="post">
+                            @csrf
+                            <input type="hidden" name="id_mitra" value="{{$mitra->id_mitra}}">
+                            <h1 class="font-w700 text-white mb-10 text-uppercase">{{ $mitra->nama_mitra }}</h1>
+                            <h2 class="h4 font-w400 text-white-op">10 Meja &bull; min. 2 Jam <a href="/mitra/edit"><i class="fa fa-gear"></i></a></h2>
+                            {{-- <a href="/mitra/edit"><i class="fa fa-gear"></i></a> --}}
+                            @if ($mitra->status_restoran == 'Tutup')
+                                <input type="hidden" name="status_resto" value="Buka">
+                                <button type="submit" class="btn btn-hero btn-noborder btn-rounded btn-success">Buka Restoran</button>
+                            @else
+                                <input type="hidden" name="status_resto" value="Tutup">
+                                <button type="submit" class="btn btn-hero btn-noborder btn-rounded btn-danger">Tutup Restoran</button>
+                            @endif
+                        </form>
+                        <button type="button" id="button_buka" style="display:none" class="js-notify btn btn-sm btn-alt-success"  data-type="success" data-icon="fa fa-check" data-message="Restoran berhasil dibuka!">Success</button>
+                        <button type="button" id="button_tutup" style="display:none" class="js-notify btn btn-sm btn-alt-success"  data-type="success" data-icon="fa fa-check" data-message="Restoran berhasil ditutup!">Success</button>
+                        <button type="button" id="button_gagal" style="display:none" class="js-notify btn btn-sm btn-alt-danger" data-type="danger" data-icon="fa fa-danger" data-message="Please make a backup before updating!">Danger</button>
                     </div>
                 </div>
             </div>
@@ -131,12 +146,12 @@
         <!-- Page Content -->
         <div class="content">
             <nav class="breadcrumb bg-white push">
-                <a class="breadcrumb-item" href="be_pages_elearning_courses.html">Mitra</a>
-                <span class="breadcrumb-item active">Warunk Upnormal</span>
+                <span class="breadcrumb-item">Mitra</span>
+                <span class="breadcrumb-item">{{ $mitra->nama_mitra }}</span>
             </nav>
             <div class="row">
                     <!-- In Orders -->
-                
+
                     <!-- END In Orders -->
 
                     <!-- Stock -->

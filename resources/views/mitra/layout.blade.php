@@ -54,8 +54,31 @@
         <script src="{{asset('assets/js/pages/be_pages_ecom_dashboard.js')}}"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key="></script>
         <script src="{{asset('assets/js/plugins/gmapsjs/gmaps.min.js')}}"></script>
+        <script src="{{asset('assets/js/plugins/bootstrap-notify/bootstrap-notify.min.js')}}"></script>
 
         <!-- Page JS Code -->
         <script src="{{asset('assets/js/pages/be_comp_maps_google.js')}}"></script>
+        <script>
+            $(window).on('load', function() {
+                @if(Session::has('notifikasi'))
+                    $('#{{{Session::get('notifikasi')}}}').click();
+                @endif
+            });
+
+            $('.button-tolak').click(function() {
+                $(this).closest("form").attr("action", "{{url('/mitra/tolak-pemesanan')}}");
+                $(this).closest("form").submit();
+            });
+
+            $('.button-terima').click(function() {
+                $(this).closest("form").attr("action", "{{url('/mitra/terima-pemesanan')}}");
+                $(this).closest("form").submit();
+            });
+
+            jQuery(function () {
+                // Init page helpers (BS Datepicker + BS Colorpicker + BS Maxlength + Select2 + Masked Input + Range Sliders + Tags Inputs plugins)
+                Codebase.helpers(['table-tools', 'notify']);
+            });
+        </script>
     </body>
 </html>
