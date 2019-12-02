@@ -187,7 +187,7 @@
                                         <div class="col-12">
                                             <label class="col-12 px-0">Total Harga Pemesanan</label>
                                             <div class="col-12 px-0">
-                                                <em><p class="p-10 bg-primary-lighter text-primary-dark">RP. 50.000</p></em>
+                                                <em><p class="p-10 bg-primary-lighter text-primary-dark">RP. {{$biaya}}</p></em>
                                             </div>
                                         </div>
                                     </div>
@@ -205,7 +205,7 @@
                                     	<label class="col-12" for="crypto-buy-from">Kode Transaksi Pembayaran<span class="text-danger">*</span></label>
                                         <div class="col-12">
                                             <input type="text" class="form-control" id="no_verifikasi" name="no_verifikasi" required>
-                                            <input type="text" class="form-control" name="id_booking" value="{{$booking}}" hidden>
+                                            <input type="text" class="form-control" name="id_booking" value="{{$booking_id}}" hidden>
                                             <input type="text" class="form-control" name="id_mitra" value="{{$mitra}}" hidden>
                                         </div>
                                     </div>

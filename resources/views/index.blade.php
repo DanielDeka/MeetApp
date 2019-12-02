@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>MeetApp &mdash; Website Template by Colorlib</title>
+    <title>MeetApp &mdash; Where Your Meeting Needs Fulfilled!</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    
+
+
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,700,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="{{asset('css/aos.css')}}">
 
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
-    
+
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
@@ -38,13 +38,13 @@
         </div>
         <div class="site-mobile-menu-body"></div>
       </div>
-     
-      
+
+
       <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
 
         <div class="container">
           <div class="row align-items-center">
-            
+
             <div class="col-6 col-xl-2">
               <h1 class="mb-0 site-logo"><a href="index.html" class="mb-0">MeetApp</a></h1>
             </div>
@@ -70,7 +70,7 @@
                       </li>
                     </ul>
                   </li>
-                  
+
                   <li><a href="#portfolio-section" class="nav-link">Portfolio</a></li>
                   <li><a href="#services-section" class="nav-link">Services</a></li>
                   <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
@@ -94,25 +94,25 @@
 
           </div>
         </div>
-        
+
       </header>
 
-    
-       
+
+
       <div class="site-blocks-cover overlay" style="background-image: url(images/hero_1.jpg);" data-aos="fade" id="home-section">
 
         <div class="container">
           <div class="row align-items-center justify-content-center">
 
-            
+
             <div class="col-md-8 mt-lg-5 text-center">
               <h1 class="text-uppercase mb-5" data-aos="fade-up">MeetApp<br><small>one stop solution for your meeting needs</small></h1>
-              
+
               <div data-aos="fade-up" data-aos-delay="100">
                 <a href="#contact-section" class="btn smoothscroll btn-primary mr-2 mb-2">Start Booking!</a>
               </div>
             </div>
-              
+
           </div>
         </div>
 
@@ -121,9 +121,9 @@
             <span class="mouse-wheel"></span>
           </span>
         </a>
-      </div>  
+      </div>
 
-      
+
       <div class="site-section cta-big-image" id="about-section">
         <div class="container">
           <div class="row mb-5">
@@ -140,22 +140,22 @@
             <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
               <div class="mb-4">
                 <h3 class="h3 mb-4 text-black">Booking tempat rapat dengan mudah.</h3>
-                <p>MeetApp merupakan aplikasi yang mempermudah mahasiswa ITS dalam menentukan dan membooking tempat untuk rapat ataupun nongkrong dengan beberapa ketukan jari saja. MeetApp akan membantumu memesankan meja sesuai dengan kapasitas orang yang kalian inginkan maupun ruangan khusus yang kalian butuhkan agar rapat kalian lebih efektif.</p>  
+                <p>MeetApp merupakan aplikasi yang mempermudah mahasiswa ITS dalam menentukan dan membooking tempat untuk rapat ataupun nongkrong dengan beberapa ketukan jari saja. MeetApp akan membantumu memesankan meja sesuai dengan kapasitas orang yang kalian inginkan maupun ruangan khusus yang kalian butuhkan agar rapat kalian lebih efektif.</p>
                 <p><a href="#contact-section" class="smoothscroll btn btn-primary">Register</a></p>
               </div>
-              
+
               </div>
 
-              
-              
+
+
             </div>
           </div>
-        </div>  
+        </div>
       </div>
 
 
       <section class="site-section" id="portfolio-section">
-        
+
 
         <div class="container">
 
@@ -172,8 +172,8 @@
               <button class="btn btn-primary" data-filter=".resto">Restoran</button>
               <button class="btn btn-primary" data-filter=".kafe">Kafe</button>
             </div>
-          </div>  
-          
+          </div>
+
           <div id="posts" class="row no-gutter">
             <div class="item resto col-sm-6 col-md-4 col-lg-4 col-xl-3 mb-4">
               <a href="images/eatboss.jpg" class="item-wrap fancybox" data-fancybox="gallery2">
@@ -215,7 +215,7 @@
                   <h5 class="h5 mb-4 text-black text-center">Warkop Keputih</h5>
                 </div>
 
-            
+
 
 
           </div>
@@ -224,9 +224,9 @@
       </section>
 
 
-      
-      
-      
+
+
+
 
       <section class="site-section border-bottom bg-light" id="services-section">
         <div class="container">
@@ -314,7 +314,7 @@
         <div class="slide-one-item home-slider owl-carousel">
             <div>
               <div class="testimonial">
-                
+
                 <blockquote class="mb-5">
                   <p>&ldquo;Dulu kalau mau mencari tempat rapat itu agak susah, kadang malu kalau udah masuk harus beli, padahal cuma mau tau kapasitas aja. Sejak ada aplikasi ini, sudah ada referensi semua jadi tinggal pilih deh~&rdquo;</p>
                 </blockquote>
@@ -335,7 +335,7 @@
                   <div><img src="images/person_2.jpg" alt="Image" class="w-50 img-fluid mb-3"></div>
                   <p>Christine Aguilar</p>
                 </figure>
-                
+
               </div>
             </div>
 
@@ -350,7 +350,7 @@
                   <p>Robert Spears</p>
                 </figure>
 
-                
+
               </div>
             </div>
 
@@ -386,7 +386,7 @@
                   <span><span>$47</span> / year</span>
                 </div>
                 <ul class="list-unstyled ul-check success mb-5">
-                  
+
                   <li>Officia quaerat eaque neque</li>
                   <li>Possimus aut consequuntur incidunt</li>
                   <li class="remove">Lorem ipsum dolor sit amet</li>
@@ -406,7 +406,7 @@
                   <span><span>$200</span> / year</span>
                 </div>
                 <ul class="list-unstyled ul-check success mb-5">
-                  
+
                   <li>Officia quaerat eaque neque</li>
                   <li>Possimus aut consequuntur incidunt</li>
                   <li>Lorem ipsum dolor sit amet</li>
@@ -426,7 +426,7 @@
                   <span><span>$750</span> / year</span>
                 </div>
                 <ul class="list-unstyled ul-check success mb-5">
-                  
+
                   <li>Officia quaerat eaque neque</li>
                   <li>Possimus aut consequuntur incidunt</li>
                   <li>Lorem ipsum dolor sit amet</li>
@@ -439,7 +439,7 @@
               </div>
             </div>
           </div>
-          
+
           <div class="row site-section" id="faq-section">
             <div class="col-12 text-center" data-aos="fade">
               <h2 class="section-title">Frequently Ask Questions</h2>
@@ -447,12 +447,12 @@
           </div>
           <div class="row">
             <div class="col-lg-6">
-              
+
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
               <h3 class="text-black h5 mb-4">Can I accept both Paypal and Stripe?</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
               </div>
-              
+
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h5 mb-4">What available is refund period?</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
@@ -462,7 +462,7 @@
               <h3 class="text-black h5 mb-4">Can I accept both Paypal and Stripe?</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
               </div>
-              
+
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h5 mb-4">What available is refund period?</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
@@ -474,7 +474,7 @@
                 <h3 class="text-black h5 mb-4">Where are you from?</h3>
                 <p>Voluptatum nobis obcaecati perferendis dolor totam unde dolores quod maxime corporis officia et. Distinctio assumenda minima maiores.</p>
               </div>
-              
+
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h5 mb-4">What is your opening time?</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
@@ -484,7 +484,7 @@
               <h3 class="text-black h5 mb-4">Can I accept both Paypal and Stripe?</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
               </div>
-              
+
               <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="text-black h5 mb-4">What available is refund period?</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam assumenda eum blanditiis perferendis.</p>
@@ -497,7 +497,7 @@
       <section class="site-section" id="about-section">
         <div class="container">
           <div class="row mb-5">
-            
+
             <div class="col-lg-6 ml-auto mb-5 order-1 order-lg-2" data-aos="fade" data-aos="fade-up" data-aos-delay="">
               <img src="images/hero_1.jpg" alt="Image" class="img-fluid rounded">
             </div>
@@ -505,8 +505,8 @@
 
               <div class="row">
 
-                
-                
+
+
                 <div class="col-md-12 mb-md-5 mb-0 col-lg-6" data-aos="fade-up" data-aos-delay="">
                   <div class="unit-4">
                     <div class="unit-4-icon mr-4 mb-3"><span class="text-primary flaticon-head"></span></div>
@@ -529,13 +529,13 @@
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </section>
-    
-      
-      
+
+
+
 
       <section class="site-section" id="blog-section">
         <div class="container">
@@ -555,7 +555,7 @@
                 <div class="meta mb-4">Ham Brook <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
                 <p><a href="#">Continue Reading...</a></p>
-              </div> 
+              </div>
             </div>
             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
               <div class="h-entry">
@@ -577,14 +577,14 @@
                 <div class="meta mb-4">James Phelps <span class="mx-2">&bullet;</span> Jan 18, 2019<span class="mx-2">&bullet;</span> <a href="#">News</a></div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit quaerat rerum voluptatibus a eius.</p>
                 <p><a href="#">Continue Reading...</a></p>
-              </div> 
+              </div>
             </div>
-            
+
           </div>
         </div>
       </section>
 
-     
+
 
 
       <section class="site-section bg-light" id="contact-section" data-aos="fade">
@@ -595,7 +595,7 @@
             </div>
           </div>
           <div class="row mb-5">
-            
+
 
 
             <div class="col-md-4 text-center">
@@ -617,11 +617,11 @@
               </p>
             </div>
           </div>
-        
+
         </div>
       </section>
 
-      
+
       <footer class="site-footer">
         <div class="container">
           <div class="row">
@@ -669,10 +669,10 @@
               Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
-          
+
               </div>
             </div>
-            
+
           </div>
         </div>
       </footer>
@@ -691,10 +691,10 @@
   <script src="{{asset('js/jquery.sticky.js')}}"></script>
   <script src="{{asset('js/isotope.pkgd.min.js')}}"></script>
 
-  
+
   <script src="{{asset('js/main.js')}}"></script>
 
-  
-    
+
+
   </body>
 </html>

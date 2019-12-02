@@ -55,8 +55,8 @@ class PenggunaController extends Controller
 
     public function formPembayaran(Request $request)
     {
-        // $biaya = $request->biaya_booking;
-        $biaya = 50000;
+        dd($request);
+        $biaya = $request->biaya_booking;
         $pembayaran = $request->pembayaran_booking;
         return view('pengguna.form-pembayaran', compact('biaya', 'pembayaran'));
     }
@@ -82,7 +82,7 @@ class PenggunaController extends Controller
             $booking->save();
 
             $mitra = $booking['id_mitra'];
-            $booking = $booking['id_booking'];
+            $booking_id = $booking['id_booking'];
             $biaya = $booking['biaya_booking'];
             $pembayaran = $booking['pembayaran_booking'];
         } catch (Exception $e) {
@@ -91,8 +91,7 @@ class PenggunaController extends Controller
             return redirect()->back()->with(['error' => $e]);
         }
         DB::commit();
-
-        return view('pengguna.form-pembayaran', compact('biaya', 'pembayaran', 'booking', 'mitra'));
+        return view('pengguna.form-pembayaran', compact('biaya', 'pembayaran', 'booking_id', 'mitra'));
         // return redirect()->back()->with(['success' => 'Pemesanan berhasil dilakukan']);
     }
 
